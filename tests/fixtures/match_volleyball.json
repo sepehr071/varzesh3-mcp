@@ -1,0 +1,90 @@
+{
+  "id": 176339,
+  "title": "",
+  "slug": "بازی-صنعتگران-امید-طبیعت",
+  "week": 1,
+  "date": " 29 مهر 1405",
+  "time": "16:00",
+  "status": 7,
+  "statusTitle": "نتیجه نهایی",
+  "host": {
+    "id": 903105,
+    "name": "صنعتگران امید",
+    "logo": "https://match-cdn.varzesh3.com/volleyball-team/wdewp3o3.png"
+  },
+  "guest": {
+    "id": 903097,
+    "name": "طبیعت",
+    "logo": "https://match-cdn.varzesh3.com/volleyball-team/rsiz5lwr.png"
+  },
+  "matchPoints": {
+    "host": 2,
+    "guest": 3
+  },
+  "setPoints1": {
+    "host": 23,
+    "guest": 25,
+    "active": false,
+    "side": 1
+  },
+  "setPoints2": {
+    "host": 25,
+    "guest": 18,
+    "active": false,
+    "side": 0
+  },
+  "setPoints3": {
+    "host": 25,
+    "guest": 21,
+    "active": false,
+    "side": 0
+  },
+  "setPoints4": {
+    "host": 24,
+    "guest": 26,
+    "active": false,
+    "side": 1
+  },
+  "setPoints5": {
+    "host": 13,
+    "guest": 15,
+    "active": false,
+    "side": 1
+  },
+  "league": {
+    "title": "لیگ برتر والیبال",
+    "logo": "https://match-cdn.varzesh3.com/volleyball-league/v1brckk2.png",
+    "link": "/volleyball/league/33/لیگ-برتر-والیبال",
+    "season": "1405"
+  },
+  "video": {
+    "id": 566188,
+    "title": "خلاصه والیبال صنعت‌گران امید 2 - طبیعت 3",
+    "publishedOn": " 29 مهر",
+    "link": "https://video.varzesh3.com/video/566188/خلاصه-والیبال-صنعت-گران-امید-2-طبیعت-3",
+    "cover": "https://video-icdn.varzesh3.com/covers/2026/10/21/D/k51rgr3h.png",
+    "viewCount": "4.8K",
+    "duration": "06:35",
+    "category": {
+      "title": "لیگ برتر والیبال",
+      "link": "/volleyball/league/33/لیگ-برتر-والیبال"
+    }
+  },
+  "weekMatches": null,
+  "scheduledStartOnUtc": "2026-10-21T12:30:00Z",
+  "seoInfo": {
+    "canonicalHref": "https://www.varzesh3.com/volleyball/match/176339/بازی-صنعتگران-امید-طبیعت",
+    "title": "بازی صنعتگران امید و طبیعت - لیگ برتر والیبال -  29 مهر 1405",
+    "description": "ویدیو، اخبار و اتفاقات بازی صنعتگران امید - طبیعت  29 مهر 1405 در رقابتهای لیگ برتر والیبال",
+    "openGraphType": "website"
+  },
+  "news": null,
+  "isLive": false,
+  "_links": [
+    {
+      "href": "https://web-api.varzesh3.com/v1.0/volleyball/matches/176339/videos/tabs",
+      "rel": "get-videos",
+      "method": "GET"
+    }
+  ]
+}

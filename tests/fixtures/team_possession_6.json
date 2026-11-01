@@ -1,0 +1,38 @@
+{
+  "teams": [
+    {
+      "id": 10,
+      "name": "سپاهان",
+      "link": "/football/team/10/سپاهان",
+      "logo": "https://match-cdn.varzesh3.com/football-team/01150477.png",
+      "possession": 59.5,
+      "play": 11,
+      "statBackgroundColor": "#0a131c",
+      "statFontColor": "white"
+    },
+    {
+      "id": 6,
+      "name": "پرسپولیس",
+      "link": "/football/team/6/پرسپولیس",
+      "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+      "possession": 55.7,
+      "play": 11
+    },
+    {
+      "id": 18,
+      "name": "تراکتور",
+      "link": "/football/team/18/تراکتور",
+      "logo": "https://match-cdn.varzesh3.com/football-team/0bi4mf3k.png",
+      "possession": 53.5,
+      "play": 9
+    },
+    {
+      "id": 9,
+      "name": "فولاد",
+      "link": "/football/team/9/فولاد",
+      "logo": "https://match-cdn.varzesh3.com/football-team/onhagqfn.png",
+      "possession": 53.25,
+      "play": 11
+    }
+  ]
+}

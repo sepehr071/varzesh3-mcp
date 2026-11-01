@@ -1,0 +1,40 @@
+{
+  "id": 110789,
+  "name": "پیام نیازمند",
+  "portrait": "https://match-cdn.varzesh3.com/football-player/2026/06/18/A/grsosjvm.jpg",
+  "slug": "پیام-نیازمند",
+  "followerCount": 0,
+  "tabs": [],
+  "team": {
+    "id": 6,
+    "name": "پرسپولیس",
+    "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+    "link": "/football/team/6/پرسپولیس"
+  },
+  "shirtNumber": 1,
+  "role": "دروازه بان",
+  "age": 31,
+  "country": "ایران",
+  "_links": [
+    {
+      "href": "https://web-api.varzesh3.com/player/110789/follow",
+      "rel": "follow",
+      "method": "POST"
+    },
+    {
+      "href": "https://web-api.varzesh3.com/player/110789/unfollow",
+      "rel": "unfollow",
+      "method": "POST"
+    },
+    {
+      "href": "https://web-api.varzesh3.com/player/110789/following",
+      "rel": "is-following",
+      "method": "GET"
+    },
+    {
+      "href": "https://biz.varzesh3.com/items/player",
+      "rel": "ads",
+      "method": "GET"
+    }
+  ]
+}

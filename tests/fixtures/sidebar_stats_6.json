@@ -1,0 +1,39 @@
+{
+  "goalCount": 187,
+  "goalPerMatch": 1.97,
+  "minutesPerGoal": 45.72,
+  "yellowCardPerMatch": 3.19,
+  "redCardPerMatch": 0.25,
+  "goalStats": [
+    {
+      "label": "15'",
+      "count": 21,
+      "percent": 11
+    },
+    {
+      "label": "30'",
+      "count": 21,
+      "percent": 11
+    },
+    {
+      "label": "HT",
+      "count": 36,
+      "percent": 19
+    },
+    {
+      "label": "60'",
+      "count": 31,
+      "percent": 16
+    },
+    {
+      "label": "75'",
+      "count": 24,
+      "percent": 12
+    },
+    {
+      "label": "FT",
+      "count": 54,
+      "percent": 28
+    }
+  ]
+}

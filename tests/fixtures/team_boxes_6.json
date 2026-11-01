@@ -1,0 +1,182 @@
+[
+  {
+    "title": "برد",
+    "items": [
+      {
+        "id": 6,
+        "name": "پرسپولیس",
+        "stat": 7,
+        "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+        "link": "/football/team/6/پرسپولیس",
+        "statBackgroundColor": "#0a131c",
+        "statFontColor": "white"
+      },
+      {
+        "id": 10,
+        "name": "سپاهان",
+        "stat": 7,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01150477.png",
+        "link": "/football/team/10/سپاهان"
+      },
+      {
+        "id": 9,
+        "name": "فولاد",
+        "stat": 6,
+        "logo": "https://match-cdn.varzesh3.com/football-team/onhagqfn.png",
+        "link": "/football/team/9/فولاد"
+      }
+    ],
+    "hasDetail": true,
+    "type": 1
+  },
+  {
+    "title": "برد به عنوان میزبان",
+    "items": [
+      {
+        "id": 4,
+        "name": "استقلال",
+        "stat": 4,
+        "logo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+        "link": "/football/team/4/استقلال",
+        "statBackgroundColor": "#0a131c",
+        "statFontColor": "white"
+      },
+      {
+        "id": 6,
+        "name": "پرسپولیس",
+        "stat": 4,
+        "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+        "link": "/football/team/6/پرسپولیس"
+      },
+      {
+        "id": 10,
+        "name": "سپاهان",
+        "stat": 4,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01150477.png",
+        "link": "/football/team/10/سپاهان"
+      }
+    ],
+    "hasDetail": true,
+    "type": 2
+  },
+  {
+    "title": "برد به عنوان مهمان",
+    "items": [
+      {
+        "id": 6,
+        "name": "پرسپولیس",
+        "stat": 3,
+        "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+        "link": "/football/team/6/پرسپولیس",
+        "statBackgroundColor": "#0a131c",
+        "statFontColor": "white"
+      },
+      {
+        "id": 9,
+        "name": "فولاد",
+        "stat": 3,
+        "logo": "https://match-cdn.varzesh3.com/football-team/onhagqfn.png",
+        "link": "/football/team/9/فولاد"
+      },
+      {
+        "id": 10,
+        "name": "سپاهان",
+        "stat": 3,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01150477.png",
+        "link": "/football/team/10/سپاهان"
+      }
+    ],
+    "hasDetail": true,
+    "type": 3
+  },
+  {
+    "title": "باخت",
+    "items": [
+      {
+        "id": 902597,
+        "name": "مس شهر بابک",
+        "stat": 6,
+        "logo": "https://match-cdn.varzesh3.com/football-team/gzueny5i.png",
+        "link": "/football/team/902597/مس-شهر-بابک",
+        "statBackgroundColor": "#0a131c",
+        "statFontColor": "white"
+      },
+      {
+        "id": 14,
+        "name": "ملوان",
+        "stat": 5,
+        "logo": "https://match-cdn.varzesh3.com/football-team/uz3ygqmp.png",
+        "link": "/football/team/14/ملوان"
+      },
+      {
+        "id": 21,
+        "name": "صنعت نفت آبادان",
+        "stat": 5,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01150464.png",
+        "link": "/football/team/21/صنعت-نفت-آبادان"
+      }
+    ],
+    "hasDetail": true,
+    "type": 4
+  },
+  {
+    "title": "باخت به عنوان میزبان",
+    "items": [
+      {
+        "id": 14,
+        "name": "ملوان",
+        "stat": 4,
+        "logo": "https://match-cdn.varzesh3.com/football-team/uz3ygqmp.png",
+        "link": "/football/team/14/ملوان",
+        "statBackgroundColor": "#0a131c",
+        "statFontColor": "white"
+      },
+      {
+        "id": 37,
+        "name": "نساجی مازندران",
+        "stat": 3,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01323791.png",
+        "link": "/football/team/37/نساجی-مازندران"
+      },
+      {
+        "id": 902597,
+        "name": "مس شهر بابک",
+        "stat": 3,
+        "logo": "https://match-cdn.varzesh3.com/football-team/gzueny5i.png",
+        "link": "/football/team/902597/مس-شهر-بابک"
+      }
+    ],
+    "hasDetail": true,
+    "type": 5
+  },
+  {
+    "title": "باخت به عنوان مهمان",
+    "items": [
+      {
+        "id": 11,
+        "name": "پیکان",
+        "stat": 4,
+        "logo": "https://match-cdn.varzesh3.com/football-team/zodrzjds.png",
+        "link": "/football/team/11/پیکان",
+        "statBackgroundColor": "#0a131c",
+        "statFontColor": "white"
+      },
+      {
+        "id": 488,
+        "name": "استقلال خوزستان",
+        "stat": 4,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01398462.png",
+        "link": "/football/team/488/استقلال-خوزستان"
+      },
+      {
+        "id": 21,
+        "name": "صنعت نفت آبادان",
+        "stat": 3,
+        "logo": "https://match-cdn.varzesh3.com/football-team/01150464.png",
+        "link": "/football/team/21/صنعت-نفت-آبادان"
+      }
+    ],
+    "hasDetail": true,
+    "type": 6
+  }
+]

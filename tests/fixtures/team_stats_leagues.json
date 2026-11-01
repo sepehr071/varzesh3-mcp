@@ -1,0 +1,50 @@
+[
+  {
+    "id": 6,
+    "title": "لیگ برتر ایران",
+    "selected": true,
+    "_links": [
+      {
+        "href": "https://web-api.varzesh3.com/v2.0/football/teams/6/stats/leagues/6/seasons",
+        "rel": "get-seasons",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "لیگ نخبگان آسیا",
+    "selected": false,
+    "_links": [
+      {
+        "href": "https://web-api.varzesh3.com/v2.0/football/teams/6/stats/leagues/26/seasons",
+        "rel": "get-seasons",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "جام حذفی ایران",
+    "selected": false,
+    "_links": [
+      {
+        "href": "https://web-api.varzesh3.com/v2.0/football/teams/6/stats/leagues/22/seasons",
+        "rel": "get-seasons",
+        "method": "GET"
+      }
+    ]
+  },
+  {
+    "id": 316,
+    "title": "سوپرجام ایران",
+    "selected": false,
+    "_links": [
+      {
+        "href": "https://web-api.varzesh3.com/v2.0/football/teams/6/stats/leagues/316/seasons",
+        "rel": "get-seasons",
+        "method": "GET"
+      }
+    ]
+  }
+]

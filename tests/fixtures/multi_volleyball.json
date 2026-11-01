@@ -1,0 +1,82 @@
+{
+  "standings": [
+    {
+      "id": 909150,
+      "title": "گروه اول",
+      "teams": [
+        {
+          "rank": 1,
+          "id": 903104,
+          "name": "مهرگان مازندران",
+          "logo": "https://match-cdn.varzesh3.com/volleyball-team/cnjqzfyy.png",
+          "played": 2,
+          "wins": 2,
+          "losses": 0,
+          "pointsDeducted": 0,
+          "points": 6,
+          "manualRank": 0,
+          "setLosses": 1,
+          "setWins": 6,
+          "totalPointsConceded": 150,
+          "totalPointsScored": 171,
+          "wins30": 1,
+          "wins31": 1,
+          "wins32": 0,
+          "losses30": 0,
+          "losses31": 0,
+          "losses32": 0,
+          "setAverage": 6,
+          "totalPointsAverage": 1.14
+        },
+        {
+          "rank": 2,
+          "id": 913163,
+          "name": "رازین پلیمر",
+          "logo": "https://match-cdn.varzesh3.com/volleyball-team/ngrxbvgq.png",
+          "played": 2,
+          "wins": 2,
+          "losses": 0,
+          "pointsDeducted": 0,
+          "points": 4,
+          "manualRank": 0,
+          "setLosses": 4,
+          "setWins": 6,
+          "totalPointsConceded": 203,
+          "totalPointsScored": 224,
+          "wins30": 0,
+          "wins31": 0,
+          "wins32": 2,
+          "losses30": 0,
+          "losses31": 0,
+          "losses32": 0,
+          "setAverage": 1.5,
+          "totalPointsAverage": 1.103
+        },
+        {
+          "rank": 3,
+          "id": 902600,
+          "name": "فولاد سیرجان",
+          "logo": "https://match-cdn.varzesh3.com/volleyball-team/4cgkmrgk.png",
+          "played": 1,
+          "wins": 1,
+          "losses": 0,
+          "pointsDeducted": 0,
+          "points": 3,
+          "manualRank": 0,
+          "setLosses": 0,
+          "setWins": 3,
+          "totalPointsConceded": 61,
+          "totalPointsScored": 75,
+          "wins30": 1,
+          "wins31": 0,
+          "wins32": 0,
+          "losses30": 0,
+          "losses31": 0,
+          "losses32": 0,
+          "setAverage": 0,
+          "totalPointsAverage": 1.23
+        }
+      ]
+    }
+  ]
+}

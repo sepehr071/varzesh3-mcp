@@ -1,0 +1,781 @@
+{
+  "id": 441601,
+  "title": "الکلاسیکوی ایران - بازی پرسپولیس مقابل سپاهان",
+  "slug": "بازی-پرسپولیس-سپاهان",
+  "referee": "موعود بنیادی فر",
+  "stadium": "پاس قوامین",
+  "week": 17,
+  "date": "3 بهمن 1404",
+  "time": "14:00",
+  "status": 7,
+  "statusTitle": "نتیجه نهایی",
+  "goals": {
+    "host": 2,
+    "guest": 1
+  },
+  "host": {
+    "id": 6,
+    "name": "پرسپولیس",
+    "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+    "link": "/football/team/6/پرسپولیس",
+    "style": {
+      "backgroundColor": "#d70808",
+      "font": 0,
+      "fontColor": "#FFFFFF"
+    }
+  },
+  "guest": {
+    "id": 10,
+    "name": "سپاهان",
+    "logo": "https://match-cdn.varzesh3.com/football-team/01150477.png",
+    "link": "/football/team/10/سپاهان",
+    "style": {
+      "backgroundColor": "#f8e305",
+      "font": 0,
+      "fontColor": "#000000"
+    }
+  },
+  "league": {
+    "title": "لیگ برتر ایران",
+    "logo": "https://match-cdn.varzesh3.com/football-league/byyk02rb.png",
+    "link": "/football/league/6/%D9%84%DB%8C%DA%AF-%D8%A8%D8%B1%D8%AA%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86/1404-1405",
+    "season": "1404-1405"
+  },
+  "video": {
+    "id": 445406,
+    "title": "خلاصه بازی پرسپولیس 2 - سپاهان 1",
+    "publishedOn": " 3 بهمن 1404",
+    "link": "https://video.varzesh3.com/video/445406/خلاصه-بازی-پرسپولیس-2-سپاهان-1",
+    "cover": "https://video-icdn.varzesh3.com/covers/2026/01/23/C/tawrqxsx.png",
+    "viewCount": "136.2K",
+    "duration": "06:27",
+    "category": {
+      "title": "لیگ برتر ایران",
+      "link": "/football/league/6/لیگ-برتر-ایران/1404-1405"
+    }
+  },
+  "events": [
+    {
+      "cardType": 1,
+      "offendingPlayerId": 96786,
+      "offendingPlayerName": "میلاد سرلک",
+      "id": 2651542,
+      "time": "40",
+      "eventType": 2,
+      "side": 0,
+      "scope": 2,
+      "description": "کارت زرد دقیقه 40 میلاد سرلک",
+      "rawTime": 40,
+      "matchId": 441601
+    },
+    {
+      "cardType": 1,
+      "offendingPlayerId": 165585,
+      "offendingPlayerName": "آریا یوسفی",
+      "id": 2651543,
+      "time": "42",
+      "eventType": 2,
+      "side": 1,
+      "scope": 2,
+      "description": "کارت زرد دقیقه 42 آریا یوسفی",
+      "rawTime": 42,
+      "matchId": 441601
+    },
+    {
+      "outgoingPlayerId": 164,
+      "outgoingPlayerName": "محمد خدابنده لو",
+      "incomingPlayerId": 179154,
+      "incomingPlayerName": "مارکو باکیچ",
+      "id": 2651544,
+      "time": "46",
+      "eventType": 4,
+      "side": 0,
+      "scope": 3,
+      "description": "تعویض دقیقه 46 - مارکو باکیچ - محمد خدابنده لو",
+      "rawTime": 46,
+      "matchId": 441601
+    },
+    {
+      "outgoingPlayerId": 96786,
+      "outgoingPlayerName": "میلاد سرلک",
+      "incomingPlayerId": 93556,
+      "incomingPlayerName": "ایگور سرگیف",
+      "id": 2651545,
+      "time": "46",
+      "eventType": 4,
+      "side": 0,
+      "scope": 3,
+      "description": "تعویض دقیقه 46 - ایگور سرگیف - میلاد سرلک",
+      "rawTime": 46,
+      "matchId": 441601
+    },
+    {
+      "outgoingPlayerId": 171002,
+      "outgoingPlayerName": "انزو کریولی",
+      "incomingPlayerId": 106535,
+      "incomingPlayerName": "مجید علیاری",
+      "id": 2651547,
+      "time": "46",
+      "eventType": 4,
+      "side": 1,
+      "scope": 3,
+      "description": "تعویض دقیقه 46 - مجید علیاری - انزو کریولی",
+      "rawTime": 46,
+      "matchId": 441601
+    },
+    {
+      "goalType": 0,
+      "strikerId": 144755,
+      "assisterId": 37107,
+      "assisterName": "میلاد محمدی",
+      "strickerName": "اوستون اورونوف",
+      "id": 2651546,
+      "time": "53",
+      "eventType": 1,
+      "side": 0,
+      "scope": 3,
+      "videoLink": "https://video.varzesh3.com/video/445401/",
+      "description": "گل دقیقه 53 اوستون اورونوف",
+      "rawTime": 53,
+      "matchId": 441601,
+      "videoId": 445401,
+      "matchResult": {
+        "host": 1,
+        "guest": 0
+      }
+    },
+    {
+      "cardType": 1,
+      "offendingPlayerId": 179154,
+      "offendingPlayerName": "مارکو باکیچ",
+      "id": 2651550,
+      "time": "57",
+      "eventType": 2,
+      "side": 0,
+      "scope": 3,
+      "description": "کارت زرد دقیقه 57 مارکو باکیچ",
+      "rawTime": 57,
+      "matchId": 441601
+    },
+    {
+      "goalType": 0,
+      "strikerId": 93556,
+      "assisterId": 144755,
+      "assisterName": "اوستون اورونوف",
+      "strickerName": "ایگور سرگیف",
+      "id": 2651549,
+      "time": "72",
+      "eventType": 1,
+      "side": 0,
+      "scope": 3,
+      "videoLink": "https://video.varzesh3.com/video/445403/",
+      "description": "گل دقیقه 72 ایگور سرگیف",
+      "rawTime": 72,
+      "matchId": 441601,
+      "videoId": 445403,
+      "matchResult": {
+        "host": 2,
+        "guest": 0
+      }
+    },
+    {
+      "outgoingPlayerId": 139280,
+      "outgoingPlayerName": "کاوه رضایی",
+      "incomingPlayerId": 99944,
+      "incomingPlayerName": "امید نورافکن",
+      "id": 2651553,
+      "time": "76",
+      "eventType": 4,
+      "side": 1,
+      "scope": 3,
+      "description": "تعویض دقیقه 76 - امید نورافکن - کاوه رضایی",
+      "rawTime": 76,
+      "matchId": 441601
+    },
+    {
+      "cardType": 1,
+      "offendingPlayerId": 1231,
+      "offendingPlayerName": "سروش رفیعی",
+      "id": 2651555,
+      "time": "81",
+      "eventType": 2,
+      "side": 0,
+      "scope": 3,
+      "description": "کارت زرد دقیقه 81 سروش رفیعی",
+      "rawTime": 81,
+      "matchId": 441601
+    },
+    {
+      "cardType": 1,
+      "offendingPlayerId": 140592,
+      "offendingPlayerName": "عارف حاجی عیدی",
+      "id": 2651556,
+      "time": "81",
+      "eventType": 2,
+      "side": 1,
+      "scope": 3,
+      "description": "کارت زرد دقیقه 81 عارف حاجی عیدی",
+      "rawTime": 81,
+      "matchId": 441601
+    },
+    {
+      "outgoingPlayerId": 167345,
+      "outgoingPlayerName": "امین کاظمیان",
+      "incomingPlayerId": 617,
+      "incomingPlayerName": "امید عالیشاه",
+      "id": 2651554,
+      "time": "85",
+      "eventType": 4,
+      "side": 0,
+      "scope": 3,
+      "description": "تعویض دقیقه 85 - امید عالیشاه - امین کاظمیان",
+      "rawTime": 85,
+      "matchId": 441601
+    },
+    {
+      "cardType": 3,
+      "offendingPlayerId": 93556,
+      "offendingPlayerName": "ایگور سرگیف",
+      "id": 2651557,
+      "time": "90+5",
+      "eventType": 2,
+      "side": 0,
+      "scope": 3,
+      "videoLink": "https://video.varzesh3.com/video/445410/",
+      "description": "کارت قرمز دقیقه 90+5 ایگور سرگیف",
+      "rawTime": 95,
+      "matchId": 441601,
+      "videoId": 445410
+    },
+    {
+      "outgoingPlayerId": 39401,
+      "outgoingPlayerName": "علی علیپور",
+      "incomingPlayerId": 213820,
+      "incomingPlayerName": "سهیل صحرایی",
+      "id": 2651558,
+      "time": "90+7",
+      "eventType": 4,
+      "side": 0,
+      "scope": 3,
+      "description": "تعویض دقیقه 90+7 - سهیل صحرایی - علی علیپور",
+      "rawTime": 97,
+      "matchId": 441601
+    },
+    {
+      "playerId": 106535,
+      "playerName": "مجید علیاری",
+      "decisionType": 2,
+      "decisionTitle": "پنالتی",
+      "id": 2651560,
+      "time": "90+9",
+      "eventType": 5,
+      "side": 1,
+      "scope": 3,
+      "videoLink": "https://video.varzesh3.com/video/445412/",
+      "description": "پنالتی با کمک داور ویدیویی دقیقه 90+9 مجید علیاری",
+      "rawTime": 99,
+      "matchId": 441601,
+      "videoId": 445412
+    },
+    {
+      "cardType": 1,
+      "offendingPlayerId": 110789,
+      "offendingPlayerName": "پیام نیازمند",
+      "id": 2651565,
+      "time": "90+12",
+      "eventType": 2,
+      "side": 0,
+      "scope": 3,
+      "description": "کارت زرد دقیقه 90+12 پیام نیازمند",
+      "rawTime": 102,
+      "matchId": 441601
+    },
+    {
+      "penaltyResult": 1,
+      "kickerId": 164958,
+      "kickerName": "ریکاردو آلوز",
+      "penaltyResultTitle": "گل پنالتی",
+      "id": 2651559,
+      "time": "90+13",
+      "eventType": 3,
+      "side": 1,
+      "scope": 3,
+      "videoLink": "https://video.varzesh3.com/video/445411/",
+      "description": "پنالتی دقیقه 90+13 ریکاردو آلوز",
+      "rawTime": 103,
+      "matchId": 441601,
+      "videoId": 445411,
+      "matchResult": {
+        "host": 2,
+        "guest": 1
+      }
+    }
+  ],
+  "stats": [
+    {
+      "title": "نیمه اول",
+      "stats": {
+        "possession": {
+          "title": "مالکیت توپ",
+          "hostValue": 49,
+          "guestValue": 51,
+          "positive": false,
+          "host": {
+            "percent": 49,
+            "value": "%49"
+          },
+          "guest": {
+            "percent": 51,
+            "value": "%51"
+          },
+          "highlightSide": 2
+        },
+        "items": [
+          {
+            "title": "مجموع شوت ها",
+            "hostValue": 3,
+            "guestValue": 6,
+            "positive": true,
+            "host": {
+              "percent": 33,
+              "value": "3"
+            },
+            "guest": {
+              "percent": 67,
+              "value": "6"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "شوت در چارچوب",
+            "hostValue": 1,
+            "guestValue": 1,
+            "positive": true,
+            "host": {
+              "percent": 50,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 50,
+              "value": "1"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "شوت خارج از چارچوب",
+            "hostValue": 2,
+            "guestValue": 4,
+            "positive": true,
+            "host": {
+              "percent": 33,
+              "value": "2"
+            },
+            "guest": {
+              "percent": 67,
+              "value": "4"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "شوت  بلوکه‌ شده",
+            "hostValue": 0,
+            "guestValue": 1,
+            "positive": true,
+            "host": {
+              "percent": 0,
+              "value": "0"
+            },
+            "guest": {
+              "percent": 100,
+              "value": "1"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "مهار توپ",
+            "hostValue": 1,
+            "guestValue": 1,
+            "positive": true,
+            "host": {
+              "percent": 50,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 50,
+              "value": "1"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "کارت زرد",
+            "hostValue": 1,
+            "guestValue": 1,
+            "positive": false,
+            "host": {
+              "percent": 50,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 50,
+              "value": "1"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "کارت قرمز",
+            "hostValue": 0,
+            "guestValue": 0,
+            "positive": false,
+            "host": {
+              "percent": 0,
+              "value": "0"
+            },
+            "guest": {
+              "percent": 0,
+              "value": "0"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "کرنر",
+            "hostValue": 0,
+            "guestValue": 2,
+            "positive": true,
+            "host": {
+              "percent": 0,
+              "value": "0"
+            },
+            "guest": {
+              "percent": 100,
+              "value": "2"
+            },
+            "highlightSide": 2
+          }
+        ],
+        "isEmpty": false
+      },
+      "isActive": false
+    },
+    {
+      "title": "نیمه دوم",
+      "stats": {
+        "possession": {
+          "title": "مالکیت توپ",
+          "hostValue": 40,
+          "guestValue": 60,
+          "positive": false,
+          "host": {
+            "percent": 40,
+            "value": "%40"
+          },
+          "guest": {
+            "percent": 60,
+            "value": "%60"
+          },
+          "highlightSide": 2
+        },
+        "items": [
+          {
+            "title": "مجموع شوت ها",
+            "hostValue": 8,
+            "guestValue": 8,
+            "positive": true,
+            "host": {
+              "percent": 50,
+              "value": "8"
+            },
+            "guest": {
+              "percent": 50,
+              "value": "8"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "شوت در چارچوب",
+            "hostValue": 4,
+            "guestValue": 3,
+            "positive": true,
+            "host": {
+              "percent": 57,
+              "value": "4"
+            },
+            "guest": {
+              "percent": 43,
+              "value": "3"
+            },
+            "highlightSide": 1
+          },
+          {
+            "title": "شوت خارج از چارچوب",
+            "hostValue": 3,
+            "guestValue": 2,
+            "positive": true,
+            "host": {
+              "percent": 60,
+              "value": "3"
+            },
+            "guest": {
+              "percent": 40,
+              "value": "2"
+            },
+            "highlightSide": 1
+          },
+          {
+            "title": "شوت  بلوکه‌ شده",
+            "hostValue": 1,
+            "guestValue": 3,
+            "positive": true,
+            "host": {
+              "percent": 25,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 75,
+              "value": "3"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "مهار توپ",
+            "hostValue": 2,
+            "guestValue": 2,
+            "positive": true,
+            "host": {
+              "percent": 50,
+              "value": "2"
+            },
+            "guest": {
+              "percent": 50,
+              "value": "2"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "کارت زرد",
+            "hostValue": 3,
+            "guestValue": 1,
+            "positive": false,
+            "host": {
+              "percent": 75,
+              "value": "3"
+            },
+            "guest": {
+              "percent": 25,
+              "value": "1"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "کارت قرمز",
+            "hostValue": 1,
+            "guestValue": 0,
+            "positive": false,
+            "host": {
+              "percent": 100,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 0,
+              "value": "0"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "کرنر",
+            "hostValue": 0,
+            "guestValue": 5,
+            "positive": true,
+            "host": {
+              "percent": 0,
+              "value": "0"
+            },
+            "guest": {
+              "percent": 100,
+              "value": "5"
+            },
+            "highlightSide": 2
+          }
+        ],
+        "isEmpty": false
+      },
+      "isActive": false
+    },
+    {
+      "title": "مجموع",
+      "stats": {
+        "possession": {
+          "title": "مالکیت توپ",
+          "hostValue": 44,
+          "guestValue": 56,
+          "positive": false,
+          "host": {
+            "percent": 44,
+            "value": "%44"
+          },
+          "guest": {
+            "percent": 56,
+            "value": "%56"
+          },
+          "highlightSide": 2
+        },
+        "items": [
+          {
+            "title": "مجموع شوت ها",
+            "hostValue": 11,
+            "guestValue": 14,
+            "positive": true,
+            "host": {
+              "percent": 44,
+              "value": "11"
+            },
+            "guest": {
+              "percent": 56,
+              "value": "14"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "شوت در چارچوب",
+            "hostValue": 5,
+            "guestValue": 4,
+            "positive": true,
+            "host": {
+              "percent": 56,
+              "value": "5"
+            },
+            "guest": {
+              "percent": 44,
+              "value": "4"
+            },
+            "highlightSide": 1
+          },
+          {
+            "title": "شوت خارج از چارچوب",
+            "hostValue": 5,
+            "guestValue": 6,
+            "positive": true,
+            "host": {
+              "percent": 45,
+              "value": "5"
+            },
+            "guest": {
+              "percent": 55,
+              "value": "6"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "شوت  بلوکه‌ شده",
+            "hostValue": 1,
+            "guestValue": 4,
+            "positive": true,
+            "host": {
+              "percent": 20,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 80,
+              "value": "4"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "مهار توپ",
+            "hostValue": 3,
+            "guestValue": 3,
+            "positive": true,
+            "host": {
+              "percent": 50,
+              "value": "3"
+            },
+            "guest": {
+              "percent": 50,
+              "value": "3"
+            },
+            "highlightSide": 0
+          },
+          {
+            "title": "کارت زرد",
+            "hostValue": 4,
+            "guestValue": 2,
+            "positive": false,
+            "host": {
+              "percent": 67,
+              "value": "4"
+            },
+            "guest": {
+              "percent": 33,
+              "value": "2"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "کارت قرمز",
+            "hostValue": 1,
+            "guestValue": 0,
+            "positive": false,
+            "host": {
+              "percent": 100,
+              "value": "1"
+            },
+            "guest": {
+              "percent": 0,
+              "value": "0"
+            },
+            "highlightSide": 2
+          },
+          {
+            "title": "کرنر",
+            "hostValue": 0,
+            "guestValue": 7,
+            "positive": true,
+            "host": {
+              "percent": 0,
+              "value": "0"
+            },
+            "guest": {
+              "percent": 100,
+              "value": "7"
+            },
+            "highlightSide": 2
+          }
+        ],
+        "isEmpty": false
+      },
+      "isActive": true
+    }
+  ],
+  "lineup": null,
+  "weekMatches": null,
+  "news": null,
+  "isLive": false,
+  "scheduledStartOnUtc": "2026-01-23T10:30:00Z",
+  "hasPrediction": false,
+  "cover": "https://album-cdn.varzesh3.com/album/photos/2025/08/26/A/0acdfju34.JPG?p=20",
+  "seoInfo": {
+    "canonicalHref": "https://www.varzesh3.com/football/match/441601/بازی-پرسپولیس-سپاهان",
+    "title": "نتیجه بازی پرسپولیس مقابل سپاهان 2-1 - لیگ برتر ایران - 3 بهمن 1404 | خلاصه و آمار",
+    "description": "ویدیو، اخبار و اتفاقات بازی پرسپولیس - سپاهان 3 بهمن 1404 در رقابتهای لیگ برتر ایران",
+    "twitterCard": "summary_large_image",
+    "openGraphType": "website",
+    "noIndex": false
+  },
+  "_links": [
+    {
+      "href": "https://web-api.varzesh3.com/v1.0/football/matches/441601/videos/tabs",
+      "rel": "get-videos",
+      "method": "GET"
+    },
+    {
+      "href": "https://web-api.varzesh3.com/v1.0/football/matches/441601/albums",
+      "rel": "get-albums",
+      "method": "GET"
+    },
+    {
+      "href": "https://biz.varzesh3.com/items/match",
+      "rel": "ads",
+      "method": "GET"
+    }
+  ],
+  "standing": null
+}

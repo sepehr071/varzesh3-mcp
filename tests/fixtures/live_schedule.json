@@ -1,0 +1,33 @@
+{
+  "conductors": [
+    {
+      "date": "یکشنبه 10 آبان",
+      "items": [
+        {
+          "id": 31383,
+          "title": "پخش زنده بازی فوتبال پرث گلوری و آدلاید یونایتد",
+          "subtitle": "لیگ برتر استرالیا",
+          "matchLink": "/football/match/487193/بازی-پرث-گلوری-آدلاید-یونایتد",
+          "startTime": "11:30",
+          "liveStreamSource": "https://www.anten.ir/football/186743/فوتبال-پرث-گلوری-آدلاید-یونایتد?utm_source=varzesh3&utm_medium=live-schedule-page&utm_campaign=always"
+        },
+        {
+          "id": 31365,
+          "title": "پخش زنده بازی فوتبال کومو و ونتزیا",
+          "subtitle": "سری آ ایتالیا",
+          "matchLink": "/football/match/476351/بازی-کومو-ونتزیا",
+          "startTime": "15:00",
+          "liveStreamSource": "https://www.anten.ir/football/186732/فوتبال-کومو-ونتزیا?utm_source=varzesh3&utm_medium=live-schedule-page&utm_campaign=always"
+        },
+        {
+          "id": 31382,
+          "title": "پخش زنده بازی فوتبال هوادار و کاراگستر شبستر",
+          "subtitle": "لیگ آزادگان",
+          "matchLink": "/football/match/497528/بازی-هوادار-کاراگستر-شبستر",
+          "startTime": "15:00",
+          "liveStreamSource": "https://www.anten.ir/football/187398/فوتبال-هوادار-تهران-کاراگستر-شبستر?utm_source=varzesh3&utm_medium=live-schedule-page&utm_campaign=always"
+        }
+      ]
+    }
+  ]
+}

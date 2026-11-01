@@ -1,0 +1,26 @@
+[
+  {
+    "title": "برد با کلین شیت",
+    "teams": [
+      {
+        "id": 18,
+        "name": "تراکتور",
+        "logo": "https://match-cdn.varzesh3.com/football-team/0bi4mf3k.png"
+      }
+    ],
+    "message": "در 6 برد اخیر خود در لیگ برتر ایران همواره کلین شیت کرده است.",
+    "icon": 5
+  },
+  {
+    "title": "کلین شیت در بازیهای اخیر",
+    "teams": [
+      {
+        "id": 9,
+        "name": "فولاد",
+        "logo": "https://match-cdn.varzesh3.com/football-team/onhagqfn.png"
+      }
+    ],
+    "message": "در 3 مسابقه اخیرش در لیگ برتر ایران هیچ گلی نخورده است.",
+    "icon": 5
+  }
+]

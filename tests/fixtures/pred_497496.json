@@ -1,0 +1,52 @@
+{
+  "id": 497496,
+  "host": {
+    "name": "نساجی مازندران",
+    "logo": "https://match-cdn.varzesh3.com/football-team/01323791.png"
+  },
+  "guest": {
+    "name": "پرسپولیس",
+    "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png"
+  },
+  "scoreStats": [
+    {
+      "goals": {
+        "host": 0,
+        "guest": 2
+      },
+      "percent": 28
+    },
+    {
+      "goals": {
+        "host": 1,
+        "guest": 2
+      },
+      "percent": 27
+    },
+    {
+      "goals": {
+        "host": 0,
+        "guest": 1
+      },
+      "percent": 9
+    }
+  ],
+  "resultStats": {
+    "host": 8,
+    "guest": 82,
+    "drew": 10
+  },
+  "predictionPossibility": 2,
+  "_links": [
+    {
+      "href": "https://web-api.varzesh3.com/api/Prediction/497496/save",
+      "rel": "save",
+      "method": "POST"
+    },
+    {
+      "href": "https://pishbini.varzesh3.com/predict/497496",
+      "rel": "page",
+      "method": "GET"
+    }
+  ]
+}

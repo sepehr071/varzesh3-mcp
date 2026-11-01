@@ -1,0 +1,320 @@
+{
+  "title": "نقل و انتقالات لیگ برتر 1405-1406",
+  "lastModified": "پنج‌شنبه 12 شهریور - 21:30",
+  "teams": [
+    {
+      "id": 4,
+      "name": "استقلال",
+      "logo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+      "in": [],
+      "out": [
+        {
+          "id": 99967,
+          "name": "آرمین سهرابیان",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2022/05/14/B/jlzkd3jk.jpg",
+          "transferType": 1,
+          "description": "از استقلال به سپاهان",
+          "link": "/football/person/99967/آرمین-سهرابیان",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 31,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+          "transferId": 18416,
+          "style": {
+            "backgroundColor": "#f8e305",
+            "font": 1,
+            "fontColor": "#0F1928"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 122848,
+          "name": "آنتونیو آدان",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2023/01/09/B/m4lkjua0.jpg",
+          "transferType": 1,
+          "description": "از استقلال",
+          "link": "/football/person/122848/آنتونیو-آدان",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/07/28/C/gevwpemv.png",
+          "age": 39,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+          "transferId": 18415,
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 203513,
+          "name": "بهرام گودرزی",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2025/11/04/B/4qrolvl4.jpg",
+          "transferType": 2,
+          "description": "از استقلال به آلومینیوم اراک",
+          "link": "/football/person/203513/بهرام-گودرزی",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 21,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/mwsub33j.png",
+          "transferId": 19427,
+          "style": {
+            "backgroundColor": "#309804",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 221608,
+          "name": "داکنز نازون",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2025/07/23/B/oe4ay53h.jpg",
+          "transferType": 1,
+          "description": "از استقلال",
+          "link": "/football/person/221608/داکنز-نازون",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2022/08/10/B/w12ncdsy.png",
+          "age": 32,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+          "transferId": 18612,
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 128712,
+          "name": "رامین رضاییان",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2023/05/23/C/zqrszhcp.jpg",
+          "transferType": 1,
+          "description": "از استقلال به فولاد",
+          "link": "/football/person/128712/رامین-رضاییان",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 36,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/owb2e51r.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/onhagqfn.png",
+          "transferId": 20353,
+          "style": {
+            "backgroundColor": "#ff2b00",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        }
+      ],
+      "link": "/football/team/4/استقلال",
+      "style": {
+        "backgroundColor": "#064ae7",
+        "font": 0,
+        "fontColor": "#FFFFFF"
+      },
+      "linkIsActiveInMobile": true
+    },
+    {
+      "id": 6,
+      "name": "پرسپولیس",
+      "logo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+      "in": [
+        {
+          "id": 244628,
+          "name": "امیرحسین طاهری",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2026/08/08/C/ihrpnr4t.jpg",
+          "transferType": 1,
+          "description": "از نیروی زمینی به پرسپولیس",
+          "link": "/football/person/244628/امیرحسین-طاهری",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/kl2qlg5k.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "transferId": 19514,
+          "style": {
+            "backgroundColor": "#d70808",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 234027,
+          "name": "پوریا شهرآبادی",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2026/07/24/D/mbn5ar0k.jpeg",
+          "transferType": 1,
+          "description": "از گل گهر به پرسپولیس",
+          "link": "/football/person/234027/پوریا-شهرآبادی",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 20,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/01437525.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "transferId": 18515,
+          "style": {
+            "backgroundColor": "#d70808",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 207049,
+          "name": "پوریا لطیفی فر",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2024/02/12/C/0pfphuzf.jpg",
+          "transferType": 1,
+          "description": "از گل گهر به پرسپولیس",
+          "link": "/football/person/207049/پوریا-لطیفی-فر",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 23,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/01437525.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "transferId": 19333,
+          "style": {
+            "backgroundColor": "#d70808",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 156720,
+          "name": "پویا پورعلی",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2022/05/28/C/l4enilsc.jpg",
+          "transferType": 1,
+          "description": "از گل گهر به پرسپولیس",
+          "link": "/football/person/156720/پویا-پورعلی",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 30,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/01437525.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "transferId": 18466,
+          "style": {
+            "backgroundColor": "#d70808",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        }
+      ],
+      "out": [
+        {
+          "id": 617,
+          "name": "امید عالیشاه",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2022/12/20/C/v4iitfpd.jpg",
+          "transferType": 1,
+          "description": "از پرسپولیس",
+          "link": "/football/person/617/امید-عالیشاه",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 34,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "transferId": 18542,
+          "style": {
+            "backgroundColor": "#021471",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 167345,
+          "name": "امین کاظمیان",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2024/05/06/C/uz12zosm.jpg",
+          "transferType": 1,
+          "description": "از پرسپولیس به گل گهر",
+          "link": "/football/person/167345/امین-کاظمیان",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 30,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/01437525.png",
+          "transferId": 19338,
+          "style": {
+            "backgroundColor": "#021471",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 92357,
+          "name": "رضا شکاری",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2022/02/26/C/ifre3rwm.jpg",
+          "transferType": 1,
+          "description": "از پرسپولیس به پیکان",
+          "link": "/football/person/92357/رضا-شکاری",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 28,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/zodrzjds.png",
+          "transferId": 19467,
+          "style": {
+            "backgroundColor": "#040f6d",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 1231,
+          "name": "سروش رفیعی",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2022/02/26/B/hxqqpuwi.jpg",
+          "transferType": 1,
+          "description": "از پرسپولیس",
+          "link": "/football/person/1231/سروش-رفیعی",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 36,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "transferId": 18426,
+          "linkIsActiveInMobile": true
+        },
+        {
+          "id": 213820,
+          "name": "سهیل صحرایی",
+          "portrait": "https://match-cdn.varzesh3.com/football-player/2024/10/30/D/w1rhfvm2.jpg",
+          "transferType": 1,
+          "description": "از پرسپولیس به گل گهر",
+          "link": "/football/person/213820/سهیل-صحرایی",
+          "countryFlag": "https://match-cdn.varzesh3.com/country/2024/01/13/C/cg3hnn5a.png",
+          "age": 23,
+          "fromTeamLogo": "https://match-cdn.varzesh3.com/football-team/zwlji1u1.png",
+          "toTeamLogo": "https://match-cdn.varzesh3.com/football-team/01437525.png",
+          "transferId": 18529,
+          "style": {
+            "backgroundColor": "#021471",
+            "font": 0,
+            "fontColor": "#FFFFFF"
+          },
+          "linkIsActiveInMobile": true
+        }
+      ],
+      "link": "/football/team/6/پرسپولیس",
+      "style": {
+        "backgroundColor": "#d70808",
+        "font": 0,
+        "fontColor": "#FFFFFF"
+      },
+      "linkIsActiveInMobile": true
+    }
+  ],
+  "archive": [
+    {
+      "id": 42,
+      "title": "نقل و انتقالات لیگ برتر 1405-1406",
+      "link": "/football/transfers/iran/42/نقل-و-انتقالات-لیگ-برتر-1405-1406"
+    },
+    {
+      "id": 40,
+      "title": "نقل و انتقالات نیم فصل لیگ برتر 1404-1405",
+      "link": "/football/transfers/iran/40/نقل-و-انتقالات-نیم-فصل-لیگ-برتر-1404-1405"
+    },
+    {
+      "id": 38,
+      "title": "نقل و انتقالات لیگ برتر 1404-1405",
+      "link": "/football/transfers/iran/38/نقل-و-انتقالات-لیگ-برتر-1404-1405"
+    }
+  ],
+  "news": [
+    {
+      "id": 2439813,
+      "title": "رسمی: بیرانوند به فجر سپاسی پیوست",
+      "link": "https://www.varzesh3.com/news/2439813/رسمی-بیرانوند-به-فجر-سپاسی-پیوست",
+      "mediaType": 1
+    },
+    {
+      "id": 2439399,
+      "title": "علیرضا بیرانوند فردا صبح در پادگان",
+      "link": "https://www.varzesh3.com/news/2439399/علیرضا-بیرانوند-فردا-صبح-در-پادگان",
+      "mediaType": 1
+    },
+    {
+      "id": 2439112,
+      "title": "اسماعیل شریفات هنوز در ایران مشتری دارد! (عکس)",
+      "link": "https://www.varzesh3.com/news/2439112/اسماعیل-شریفات-هنوز-در-ایران-مشتری-دارد-عکس",
+      "mediaType": 1
+    }
+  ],
+  "slug": "نقل-و-انتقالات-لیگ-برتر"
+}

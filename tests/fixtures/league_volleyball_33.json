@@ -1,0 +1,85 @@
+{
+  "id": 33,
+  "name": "لیگ برتر والیبال",
+  "logo": "https://match-cdn.varzesh3.com/volleyball-league/v1brckk2.png",
+  "slug": "لیگ-برتر-والیبال",
+  "style": {
+    "backgroundColor": "#444444",
+    "font": 0,
+    "fontColor": "#FFFFFF"
+  },
+  "tabs": [
+    {
+      "title": "مرحله گروهی",
+      "type": 8,
+      "subtitle": "لیگ برتر والیبال 1405",
+      "default": true,
+      "seo": {
+        "canonicalHref": "https://www.varzesh3.com/volleyball/league/33/لیگ-برتر-والیبال",
+        "title": "جدول لیگ برتر والیبال و نمودار حذفی و بازی ها ",
+        "description": "جدول لیگ برتر والیبال و برنامه بازی‌های لیگ برتر والیبال و نتایج مسابفات لیگ برتر والیبال و گلزنان برتر",
+        "image": "https://match-cdn.varzesh3.com/volleyball-league/v1brckk2.png",
+        "twitterCard": "summary_large_image",
+        "openGraphType": "website",
+        "noIndex": false
+      },
+      "isLive": false,
+      "_links": [
+        {
+          "href": "https://web-api.varzesh3.com/v2.0/volleyball/leagues/33/seasons/906622/multi-standing",
+          "rel": "get",
+          "method": "GET"
+        }
+      ]
+    },
+    {
+      "title": "بازی ها",
+      "type": 2,
+      "path": "بازی-ها",
+      "description": "لیست بازی‌های لیگ برتر والیبال 1405 شامل بازی‌های هفته آینده لیگ برتر والیبال 1405 و تاریخ و ساعت بازی‌های بعدی لیگ برتر والیبال 1405",
+      "subtitle": "بازی‌های لیگ برتر والیبال 1405",
+      "default": false,
+      "seo": {
+        "canonicalHref": "https://www.varzesh3.com/volleyball/league/33/لیگ-برتر-والیبال/بازی-ها",
+        "title": "بازی های لیگ برتر والیبال",
+        "description": "برنامه بازی های لیگ برتر والیبال، مسابقات پیش رو و آتی لیگ برتر والیبال",
+        "image": "https://match-cdn.varzesh3.com/volleyball-league/v1brckk2.png",
+        "twitterCard": "summary_large_image",
+        "openGraphType": "website",
+        "noIndex": false
+      },
+      "isLive": false,
+      "_links": [
+        {
+          "href": "https://web-api.varzesh3.com/v2.0/volleyball/leagues/33/seasons/906622/matches",
+          "rel": "get",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "leagues": [
+    {
+      "id": 33,
+      "title": "لیگ برتر والیبال",
+      "tournamentType": 0,
+      "logo": "https://match-cdn.varzesh3.com/volleyball-league/v1brckk2.png",
+      "link": "/volleyball/league/33/لیگ-برتر-والیبال"
+    },
+    {
+      "id": 59,
+      "title": "والیبال المپیک",
+      "tournamentType": 0,
+      "logo": "https://match-cdn.varzesh3.com/volleyball-league/h0mdo1xs.png",
+      "link": "/volleyball/league/59/والیبال-المپیک/نمودار-حذفی"
+    },
+    {
+      "id": 102,
+      "title": "والیبال قهرمانی باشگاه‌های جهان",
+      "tournamentType": 0,
+      "logo": "https://match-cdn.varzesh3.com/volleyball-league/ftijgmue.png",
+      "link": "/volleyball/league/102/والیبال-قهرمانی-باشگاه-های-جهان/نمودار-حذفی"
+    }
+  ],
+  "_links": []
+}
