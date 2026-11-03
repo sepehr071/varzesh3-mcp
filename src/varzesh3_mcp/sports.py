@@ -12,7 +12,7 @@ from pydantic import Field
 from .http import API, SEARCH, ApiError, fetch
 from .registry import tool
 
-STATUS = {0: "scheduled", 1: "scheduled", 2: "live", 4: "postponed", 5: "cancelled", 7: "finished"}
+STATUS = {0: "scheduled", 1: "scheduled", 2: "live", 4: "postponed", 5: "cancelled", 6: "incomplete", 7: "finished"}
 TABLE = r"/(standing(/live)?|multi-standing)$"
 FORM = {1: "W", 2: "L", 3: "D"}  # recentMatches.resultType
 SPORT = {1: "football", 2: "futsal", 4: "basketball"}  # livescore league `sport` code
@@ -272,7 +272,8 @@ async def v3_scores(
     Use it for "what is on today", "Perspolis result", "live matches now". Every match has an id: pass it to
     v3_match for goals, cards and lineups. Leagues come in the site's order (major leagues first). Filter by
     league_id or team to keep the answer short. Scores are "home-away"; status is scheduled, live, finished,
-    postponed or cancelled. Basketball (NBA) scores are points. Volleyball rows carry set scores (sets), basketball quarter scores.
+    postponed, cancelled or incomplete (the site's ناتمام: played but no final result yet, e.g. a cup tie level
+    after 90 minutes; the score shown is the last one). Basketball (NBA) scores are points. Volleyball rows carry set scores (sets), basketball quarter scores.
     The site switches day=0 to the new Jalali day a few hours after midnight Tehran time; check the match dates.
     """
     data = await fetch(f"{API}/v2.0/livescore/{'today' if day == 0 else day}")
