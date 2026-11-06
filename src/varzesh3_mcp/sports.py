@@ -93,20 +93,18 @@ STATS = {
 LeagueId = Annotated[
     int,
     Field(
-        description="League id from v3_league (without arguments), e.g. 6 (Iranian Pro League), 3 (Premier League).",
+        description="League id from v3_league, e.g. 6 (Iranian Pro League), 3 (Premier League).",
         ge=1,
     ),
 ]
 Sport = Annotated[
     Literal["football", "futsal", "basketball", "volleyball", "handball"],
-    Field(description="Sport of the league (default football); league ids are per sport."),
+    Field(description="Ids are per sport."),
 ]
-SeasonId = Annotated[int | None, Field(description="Season id from v3_league; omit for the current season.", ge=1)]
-TeamId = Annotated[
-    int, Field(description="Team id from v3_search or v3_standings, e.g. 6 (Perspolis), 4 (Esteghlal).", ge=1)
-]
-Take = Annotated[int, Field(description="How many items to return.", ge=1, le=30)]
-Skip = Annotated[int, Field(description="How many items to skip (paging).", ge=0, le=500)]
+SeasonId = Annotated[int | None, Field(description="Season id from v3_league; default current.", ge=1)]
+TeamId = Annotated[int, Field(description="Team id from v3_search or v3_standings, e.g. 6 (Perspolis).", ge=1)]
+Take = Annotated[int, Field(description="Items to return.", ge=1, le=30)]
+Skip = Annotated[int, Field(description="Items to skip.", ge=0, le=500)]
 
 
 def _st(m: dict) -> str:
@@ -161,7 +159,6 @@ def _news_item(n: dict) -> dict:
         "title": n.get("title"),
         "summary": n.get("shortDescription"),
         "published": n.get("persianPublishedOn"),
-        "published_utc": n.get("publishedOn"),
         "views": n.get("viewCountHumanReadable"),
         "comments": n.get("commentCount"),
     }
@@ -174,7 +171,6 @@ def _video_item(v: dict) -> dict:
         "duration": v.get("duration"),
         "views": v.get("viewCountHumanReadable"),
         "published": v.get("persianPublishedOn"),
-        "published_utc": v.get("publishedOn"),
         "url": f"https://video.varzesh3.com/video/{v.get('id')}",
     }
 
@@ -249,32 +245,28 @@ def _table(teams: list[dict]) -> list[dict]:
 
 @tool("Scores of a day")
 async def v3_scores(
-    day: Annotated[
-        int, Field(description="0 = today, -1 yesterday, 1 tomorrow; the site offers -2 to 2.", ge=-2, le=2)
-    ] = 0,
+    day: Annotated[int, Field(description="0 today, -1 yesterday, 1 tomorrow.", ge=-2, le=2)] = 0,
     sport: Annotated[
         Literal["all", "football", "futsal", "basketball", "volleyball", "handball"],
-        Field(description="Sport filter; the live score page lists football, futsal and NBA (others when in season)."),
+        Field(description="Sport filter."),
     ] = "all",
     league_id: Annotated[int | None, Field(description="Only this league (id from v3_league).", ge=1)] = None,
     team: Annotated[
         str | None,
         Field(
-            description="Only matches whose home or away team name contains this Persian text, e.g. پرسپولیس.",
+            description="Persian team-name text, e.g. پرسپولیس.",
             max_length=60,
         ),
     ] = None,
-    live_only: Annotated[bool, Field(description="Only matches being played right now.")] = False,
-    max_matches: Annotated[int, Field(description="Cap on matches returned across all leagues.", ge=1, le=200)] = 60,
+    live_only: Annotated[bool, Field(description="Only matches in play.")] = False,
+    max_matches: Annotated[int, Field(description="Cap across all leagues.", ge=1, le=200)] = 60,
 ) -> dict:
-    """Get the live scores, results and fixtures of one day across leagues, as the Varzesh3 live score page lists them.
+    """Get the live scores, results and fixtures of one day across leagues.
 
-    Use it for "what is on today", "Perspolis result", "live matches now". Every match has an id: pass it to
-    v3_match for goals, cards and lineups. Leagues come in the site's order (major leagues first). Filter by
-    league_id or team to keep the answer short. Scores are "home-away"; status is scheduled, live, finished,
-    postponed, cancelled or incomplete (the site's ناتمام: played but no final result yet, e.g. a cup tie level
-    after 90 minutes; the score shown is the last one). Basketball (NBA) scores are points. Volleyball rows carry set scores (sets), basketball quarter scores.
-    The site switches day=0 to the new Jalali day a few hours after midnight Tehran time; check the match dates.
+    Every match has an id for v3_match. Filter by league_id or team to keep it short. Scores are "home-away";
+    status: scheduled, live, finished, postponed, cancelled or incomplete (played, no final result yet).
+    Basketball scores are points; volleyball rows carry sets, basketball quarters. day=0 switches to the new
+    Jalali day some hours after midnight Tehran time.
     """
     data = await fetch(f"{API}/v2.0/livescore/{'today' if day == 0 else day}")
     leagues, left, total = [], max_matches, 0
@@ -367,22 +359,17 @@ def _event(e: dict) -> dict:
 
 @tool("Match detail")
 async def v3_match(
-    match_id: Annotated[int, Field(description="Match id from v3_scores, v3_league_matches or v3_team_matches.", ge=1)],
+    match_id: Annotated[int, Field(description="Match id from v3_scores or a list tool.", ge=1)],
     sport: Annotated[
         Literal["football", "futsal", "basketball", "volleyball", "handball"],
-        Field(description="Sport of the match (the sport field of v3_scores; league links show it too)."),
+        Field(description="Sport of the match."),
     ] = "football",
-    prediction: Annotated[
-        bool, Field(description="Football only: add the fans' prediction poll (win/draw/loss shares, popular scores).")
-    ] = False,
+    prediction: Annotated[bool, Field(description="Football only: add the fans' poll (percent shares).")] = False,
 ) -> dict:
-    """Get one match: score, status, goals, cards, penalties, substitutions, lineups, referee, stadium, summary video and next matches.
+    """Get one match: score, status, goals, cards, penalties, substitutions, lineups, referee, stadium, summary video.
 
-    Use it after v3_scores or a list tool gave you a match id. Football lineups are formation lines from goalkeeper
-    forward, plus bench and coach; lineups appear only close to kick-off. Events decode own goals, second yellows, VAR
-    decisions, penalties and shoot-outs. Varzesh3 has no per-match possession or shot statistics (season averages per team:
-    v3_league_stats). Basketball gives quarter points, volleyball set scores, both the teams' last matches. With
-    prediction=true the fans' poll is added (shares are percentages).
+    Use it after v3_scores or a list tool gave a match id. Lineups appear only close to kick-off. No per-match
+    possession or shot statistics. Basketball gives quarter points, volleyball set scores, plus both teams' last matches.
     """
     d = await fetch(f"{API}/v2.0/{sport}/matches/{match_id}")
     league = d.get("league") or {}
@@ -453,19 +440,14 @@ def _row_next(m: dict | None) -> str | None:
 
 @tool("Leagues and seasons")
 async def v3_league(
-    league_id: Annotated[
-        int | None, Field(description="League id; omit to list the main leagues and their ids.", ge=1)
-    ] = None,
+    league_id: Annotated[int | None, Field(description="Omit to list main leagues.", ge=1)] = None,
     sport: Sport = "football",
 ) -> dict:
     """List the football leagues with their ids, or get one league's current season id and past seasons with winners.
 
-    Call it without league_id to find an id (Iranian Pro League 6, Premier League 3, La Liga 2, Serie A 4...) for
-    v3_standings, v3_league_matches, v3_top_players and v3_news. That list is the site's short menu: any league_id
-    shown by v3_scores works too (e.g. 55 Portuguese league, 35 Turkish Super League, 17 English Championship).
-    With league_id it returns season ids and who won each season (football only); the other tools default to the
-    current season. Other sports: pass sport="futsal" (league 27), "volleyball" (33), "basketball" (32 league,
-    209 NBA) or "handball" (4); v3_standings, v3_league_matches and v3_news take the same sport argument.
+    Call it without league_id to find an id (Iranian Pro League 6, Premier League 3, La Liga 2, Serie A 4). Any
+    league_id from v3_scores works too (55 Portuguese, 35 Turkish). Past seasons are football only. Other sports:
+    sport="futsal" (league 27), "volleyball" (33), "basketball" (32; NBA 209) or "handball" (4).
     """
     if league_id is None:
         if sport != "football":
@@ -505,15 +487,14 @@ async def v3_standings(
     season_id: SeasonId = None,
     stage: Annotated[
         Literal["table", "knockout"],
-        Field(description="table = league table or group tables; knockout = the bracket of cups."),
+        Field(description="knockout = cup bracket."),
     ] = "table",
     sport: Sport = "football",
 ) -> dict:
-    """Get the table of a football league (rank, played, won, drawn, lost, goals, points, recent form), group tables or a cup bracket.
+    """Get a league table (rank, played, won, drawn, lost, goals, points, form), group tables or a cup bracket.
 
-    Use it for "league table", "who is top", "how many points has X". Leagues with groups (World Cup) return one
-    table per group. For cups use stage="knockout". form is the last five results as W, D, L, oldest first (the last letter is the latest match). Qualification and
-    relegation zones are named in `zones`. Volleyball tables carry sets_won/sets_lost and points_for/points_against.
+    Groups (World Cup) return one table per group; cups need stage="knockout". form is the last five results
+    W/D/L, oldest first. Zones are in `zones`. Volleyball adds sets and points for/against.
     """
     view = await _league_view(league_id, sport)
     has_table = _tab_href(view, TABLE)
@@ -560,15 +541,13 @@ async def v3_league_matches(
     league_id: LeagueId,
     which: Annotated[
         Literal["current", "upcoming", "results"],
-        Field(
-            description="current = the rounds around today; upcoming = future rounds; results = played rounds, newest last."
-        ),
+        Field(description="current = rounds around today; results = played, newest last."),
     ] = "current",
     season_id: SeasonId = None,
     skip: Annotated[
         int,
         Field(
-            description="Matches to skip. For results this goes further back in time; for upcoming further ahead.",
+            description="Matches to skip: back in time for results, ahead for upcoming.",
             ge=0,
             le=500,
         ),
@@ -577,8 +556,7 @@ async def v3_league_matches(
 ) -> dict:
     """Get a league's matches round by round: scores of played rounds and dates of coming ones.
 
-    Use it for "next round of La Liga", "results of week 10". Start with which="current", then page with
-    which="upcoming" or "results" and skip=9 (about one round) at a time. Each match has an id for v3_match.
+    Start with which="current", then page with "upcoming" or "results" and skip=9 (about a round). Each match has an id for v3_match.
     """
     view = await _league_view(league_id, sport)
     path = _season_path(view, r"/matches$", season_id)
@@ -603,21 +581,15 @@ async def v3_top_players(
     league_id: LeagueId,
     stat: Annotated[
         Literal[tuple(STATS)],
-        Field(
-            description="goals (top scorers), assists, goals_and_assists, clean_sheets (goalkeepers), yellow_cards, red_cards, minutes, penalties, fastest_goals, hat_tricks or average_rating."
-        ),
+        Field(description="goals = top scorers; clean_sheets = goalkeepers."),
     ] = "goals",
     season_id: SeasonId = None,
-    limit: Annotated[int, Field(description="How many players, best first.", ge=1, le=30)] = 10,
-    sport: Annotated[
-        Literal["football", "futsal"], Field(description="football (all stats) or futsal (top scorers only).")
-    ] = "football",
+    limit: Annotated[int, Field(description="Best first.", ge=1, le=30)] = 10,
+    sport: Annotated[Literal["football", "futsal"], Field(description="futsal: top scorers only.")] = "football",
 ) -> dict:
     """Get the best players of a football (or futsal) league by one statistic, e.g. top scorers or most assists.
 
-    Use it for "top scorer of the Premier League", "most yellow cards". Each player has an id (pass it to
-    v3_player), team, appearances and the other season counters; a counter that is missing is zero. For one
-    team's players use v3_team_players.
+    Each player has an id for v3_player, team and season counters (a missing counter is zero). For one team use v3_team_players.
     """
     view = await _league_view(league_id, sport)
     if sport == "futsal":
@@ -640,17 +612,13 @@ async def v3_top_players(
 @tool("Team page")
 async def v3_team(
     team_id: TeamId,
-    squad: Annotated[bool, Field(description="Include the squad (numbers, names, ages).")] = True,
-    transfers: Annotated[bool, Field(description="Include the transfers in and out.")] = False,
-    sport: Annotated[
-        Literal["football", "futsal"], Field(description="futsal teams have form only (no squad or transfers).")
-    ] = "football",
+    squad: Annotated[bool, Field(description="Include the squad.")] = True,
+    transfers: Annotated[bool, Field(description="Include transfers in and out.")] = False,
+    sport: Annotated[Literal["football", "futsal"], Field(description="futsal: form only.")] = "football",
 ) -> dict:
     """Get a football team's page: name, followers, recent form, squad by position and optionally transfers.
 
-    Use it for "who plays for Esteghlal", "Perspolis squad", "latest signings". form is the last three results as
-    W, D, L, newest first, for all, home and away matches. For the team's matches call
-    v3_team_matches; for its news call v3_news with scope="team".
+    form is the last three results W/D/L, newest first, for all, home and away. For matches use v3_team_matches, for news v3_news(scope="team").
     """
     t = await fetch(f"{API}/v2.0/{sport}/teams/{team_id}")
     form = t.get("recentForm") or {}
@@ -692,14 +660,14 @@ async def v3_team_matches(
     team_id: TeamId,
     which: Annotated[
         Literal["results", "upcoming"],
-        Field(description="results = played matches, newest first; upcoming = next matches in date order."),
+        Field(description="results are newest first."),
     ] = "results",
-    limit: Annotated[int, Field(description="How many matches.", ge=1, le=24)] = 10,
+    limit: Annotated[int, Field(ge=1, le=24)] = 10,
     sport: Annotated[Literal["football", "futsal"], Field(description="Sport of the team.")] = "football",
 ) -> dict:
-    """Get a football team's latest results or its upcoming matches across all competitions.
+    """Get a football team's latest results or upcoming matches across all competitions.
 
-    Use it for "Persepolis last 5 results" or "when does Esteghlal play next". Each match has an id for v3_match.
+    Each match has an id for v3_match.
     """
     d = await fetch(f"{API}/v2.0/{sport}/teams/{team_id}/{'results' if which == 'results' else 'fixtures'}")
     items = d.get("items", [])
@@ -711,33 +679,29 @@ async def v3_team_matches(
 async def v3_news(
     scope: Annotated[
         Literal["latest", "most_read", "most_commented", "team", "league", "player", "match", "section"],
-        Field(
-            description="latest, most_read and most_commented are site-wide; team, league, player and match need `id`; section needs `section`."
-        ),
+        Field(description="team, league, player, match need `id`; section needs `section`."),
     ] = "latest",
     id: Annotated[
         int | None,
-        Field(description="Team, league, player or match id when scope is team, league, player or match.", ge=1),
+        Field(description="Id for scope team, league, player or match.", ge=1),
     ] = None,
     take: Take = 10,
     skip: Skip = 0,
     sport: Annotated[
         Literal["football", "futsal", "basketball", "volleyball", "handball"],
-        Field(description="Sport of the team, league, player or match id (default football)."),
+        Field(description="Sport of the id."),
     ] = "football",
     section: Annotated[
         str | None,
         Field(
-            description="For scope=section: a sport page such as Wrestling, Volleyball, Tennis, Boxing, Taekwondo, Chess, Athletics, Swim, Cycling, Esports (about 50 are known).",
+            description="For scope=section: sport page such as Wrestling, Tennis, Boxing, Chess, Esports (about 50).",
             max_length=30,
         ),
     ] = None,
 ) -> dict:
     """Get Varzesh3 news headlines with a short summary: latest, most read, most commented, or about a team, league, player, match or sport.
 
-    Use it for "latest news", "news about Esteghlal", "wrestling news" (scope="section", section="Wrestling").
-    Call v3_article with a news id to read the whole story. A section returns the newest ~60 news and videos mixed
-    (type tells which; videos open on video.varzesh3.com).
+    Call v3_article with a news id for the whole story. scope="section" returns ~60 newest news and videos mixed (type tells which).
     """
     if scope == "section":
         name = next((x for x in SECTIONS if x.lower() == (section or "").lower().replace(" ", "")), None)
@@ -774,17 +738,13 @@ async def v3_news(
 
 @tool("News story")
 async def v3_article(news_id: Annotated[int, Field(description="News id from v3_news or v3_search.", ge=1)]) -> dict:
-    """Read one news story: title, publish time, full text (plain text, up to 6000 characters), tags and the match it is about.
-
-    Use it after v3_news or v3_search when the user wants the story, not just the headline. Text is site content.
-    """
+    """Read one news story: title, publish time, full text (up to 6000 characters), tags and the match it is about."""
     d = await fetch(f"{API}/v1.0/news/{news_id}")
     return {
         "id": d.get("id"),
         "title": d.get("title"),
         "summary": d.get("shortDescription"),
         "published": d.get("persianPublishedOn"),
-        "published_utc": d.get("publishedOn"),
         "views": d.get("viewCountHumanReadable"),
         "comments": d.get("commentCount"),
         "match_id": d.get("matchId"),
@@ -798,22 +758,21 @@ async def v3_article(news_id: Annotated[int, Field(description="News id from v3_
 async def v3_videos(
     scope: Annotated[
         Literal["latest", "team", "league", "match", "player"],
-        Field(description="latest is site-wide; team, league, match and player need `id`."),
+        Field(description="team, league, match, player need `id`."),
     ] = "latest",
     id: Annotated[
         int | None,
-        Field(description="Team, league, match or player id when scope is team, league, match or player.", ge=1),
+        Field(description="Id for scope team, league, match or player.", ge=1),
     ] = None,
     take: Take = 10,
     skip: Skip = 0,
     sport: Annotated[
         Literal["football", "futsal", "basketball", "volleyball", "handball"],
-        Field(description="Sport of the id (default football)."),
+        Field(description="Sport of the id."),
     ] = "football",
 ) -> dict:
     """Get Varzesh3 videos (goals, match summaries, interviews): latest, or about one team, league, match or player.
 
-    Use it for "highlights of the Perspolis match" (scope="match" with the match id) or "latest goals".
     Each video has a page url on video.varzesh3.com.
     """
     if scope == "latest":
@@ -836,17 +795,16 @@ async def v3_search(
     query: Annotated[
         str,
         Field(
-            description="Persian name of a team, player, league, or any news/video keyword, e.g. پرسپولیس.",
+            description="Persian name or keyword, e.g. پرسپولیس.",
             min_length=1,
             max_length=80,
         ),
     ],
-    limit: Annotated[int, Field(description="Results per kind.", ge=1, le=10)] = 5,
+    limit: Annotated[int, Field(description="Per kind.", ge=1, le=10)] = 5,
 ) -> dict:
     """Search Varzesh3 for teams, people, leagues, news and videos by name; the way to turn a name into an id.
 
-    Use it first when the user names a team or player: `entities` carry the team id (kind Team) for v3_team,
-    v3_team_matches and v3_news(scope="team"). Search is Persian; English names usually find nothing.
+    Use it first when the user names a team or player: `entities` carry the ids. Persian only; English names usually find nothing.
     """
     d = await fetch(SEARCH, {"q": query})
     return {
@@ -863,14 +821,13 @@ async def v3_search(
 async def v3_player(
     player_id: Annotated[
         int,
-        Field(description="Player id: `id` in v3_top_players, v3_team_players, v3_match events or v3_search.", ge=1),
+        Field(description="Player id from v3_top_players, v3_team_players, v3_match or v3_search.", ge=1),
     ],
     sport: Annotated[Literal["football", "futsal"], Field(description="Sport of the player.")] = "football",
 ) -> dict:
     """Get a player's profile (team, position, shirt number, age, country) with his latest news and videos.
 
-    Use it after any tool gave you a player id ("who is X", "news about X"). Varzesh3 keeps no career or season
-    statistics on the player page: for goals and assists use v3_team_players (his team) or v3_top_players (league).
+    No career or season statistics here: use v3_team_players or v3_top_players.
     """
     p = await fetch(f"{API}/v2.0/{sport}/players/{player_id}")
     out: dict[str, Any] = {
@@ -907,20 +864,17 @@ async def v3_team_players(
     team_id: TeamId,
     stat: Annotated[
         Literal[tuple(TEAM_PLAYER_STATS)],
-        Field(
-            description="goals, assists, goals_and_assists, clean_sheets, penalties, yellow_cards, red_cards or average_rating."
-        ),
+        Field(description="Statistic to rank by."),
     ] = "goals",
     league_id: Annotated[
-        int | None, Field(description="Competition of the stats (league id); omit for the team's main league.", ge=1)
+        int | None, Field(description="Competition (league id); default the team's main league.", ge=1)
     ] = None,
     season_id: SeasonId = None,
 ) -> dict:
     """Get the season statistics of one football team's players: goals, assists, appearances, minutes, cards.
 
-    Use it for "who scored for Perspolis", "Esteghlal assists", player numbers of a squad. Defaults to the current
-    season of the team's main league; `competitions` lists other leagues (and cups) to pass as league_id. Players
-    with a zero in the chosen stat may be missing. Pass a player id to v3_player.
+    Defaults to the current season of the team's main league; `competitions` lists others to pass as league_id.
+    Players with zero in the chosen stat may be missing.
     """
     base = f"{API}/v2.0/football/teams/{team_id}/stats"
     comps = await fetch(f"{base}/leagues")
@@ -951,15 +905,14 @@ async def v3_head_to_head(
     opponent_id: TeamId,
     depth: Annotated[
         int,
-        Field(description="How many pages of 24 past matches of team_id to scan (5 is about 4 seasons).", ge=1, le=10),
+        Field(description="Pages of 24 matches to scan (5 is about 4 seasons).", ge=1, le=10),
     ] = 5,
-    limit: Annotated[int, Field(description="How many meetings to list, newest first.", ge=1, le=30)] = 10,
+    limit: Annotated[int, Field(description="Newest first.", ge=1, le=30)] = 10,
 ) -> dict:
     """Get the past meetings of two football teams with a won/drawn/lost summary for team_id.
 
-    Use it for "Perspolis vs Esteghlal history", "last derby results". Varzesh3 has no head-to-head page, so this
-    scans the last depth*24 matches of team_id (all competitions) for the opponent; raise depth to look further back.
-    Find ids with v3_search. Each meeting has an id for v3_match.
+    No upstream head-to-head page: this scans the last depth*24 matches of team_id (all competitions) for the
+    opponent; raise depth to look further back. Each meeting has an id for v3_match.
     """
     pages = await asyncio.gather(
         *(fetch(f"{API}/v2.0/football/teams/{team_id}/results", {"skip": i * 24}) for i in range(depth))
@@ -995,22 +948,19 @@ async def v3_head_to_head(
 @tool("Transfers")
 async def v3_transfers(
     market: Annotated[
-        Literal["iran", "euro"], Field(description="iran = Iranian Pro League clubs, euro = European clubs.")
+        Literal["iran", "euro"], Field(description="iran = Iranian Pro League, euro = European clubs.")
     ] = "iran",
-    team_id: Annotated[int | None, Field(description="Only this team (id from v3_search or a table).", ge=1)] = None,
-    direction: Annotated[Literal["all", "in", "out"], Field(description="Arrivals, departures or both.")] = "all",
+    team_id: Annotated[int | None, Field(description="Only this team.", ge=1)] = None,
+    direction: Annotated[Literal["all", "in", "out"], Field(description="Arrivals or departures.")] = "all",
     loans: Annotated[
-        Literal["all", "only", "exclude"], Field(description="only = loan deals, exclude = permanent deals only.")
+        Literal["all", "only", "exclude"], Field(description="only = loans, exclude = permanent only.")
     ] = "all",
-    window_id: Annotated[
-        int | None, Field(description="A past transfer window id from `windows`; omit for the latest.", ge=1)
-    ] = None,
-    limit: Annotated[int, Field(description="Cap on moves returned across all teams.", ge=1, le=300)] = 60,
+    window_id: Annotated[int | None, Field(description="Id from `windows`; default latest.", ge=1)] = None,
+    limit: Annotated[int, Field(description="Cap across all teams.", ge=1, le=300)] = 60,
 ) -> dict:
     """Get the football transfer list of a window, club by club: players signed and players who left.
 
-    Use it for "who did Esteghlal sign", "all Iranian league transfers", "loan deals". Filter by team_id to keep the
-    answer short. `windows` lists earlier windows for window_id; `news` has the latest transfer headlines.
+    Filter by team_id to keep it short. `windows` lists earlier windows for window_id.
     """
     d = await fetch(f"{API}/v2.0/football/transfers/{market}" + (f"/{window_id}" if window_id else ""))
     teams, left, total = [], limit, 0
@@ -1053,14 +1003,13 @@ async def v3_transfers(
 async def v3_tv_schedule(
     query: Annotated[
         str | None,
-        Field(description="Only broadcasts whose name or competition contains this Persian text.", max_length=60),
+        Field(description="Persian text in name or competition.", max_length=60),
     ] = None,
-    max_items: Annotated[int, Field(description="Cap on broadcasts returned.", ge=1, le=100)] = 40,
+    max_items: Annotated[int, Field(ge=1, le=100)] = 40,
 ) -> dict:
     """Get the live broadcast schedule (جدول پخش زنده) of sports matches for the next days, with start times and stream links.
 
-    Use it for "which matches are on live today", "when is the Liverpool game broadcast". match_id (when the
-    broadcast is linked to a football match) goes to v3_match. Stream links open on anten.ir.
+    match_id (when linked to a football match) goes to v3_match.
     """
     d = await fetch(f"{API}/v1.0/live")
     days, left = [], max_items
@@ -1090,17 +1039,13 @@ async def v3_league_stats(
     league_id: LeagueId,
     ranking: Annotated[
         Literal[tuple(TEAM_RANKING)] | None,
-        Field(
-            description="Full team ranking instead of the top-3 boxes: wins, losses, clean_sheets, corners, possession, comebacks, youngest or oldest."
-        ),
+        Field(description="Full team ranking instead of the top-3 boxes."),
     ] = None,
     season_id: SeasonId = None,
 ) -> dict:
     """Get a football league's season statistics: goals per match, cards per match, goal timing, streak notes and team rankings.
 
-    Use it for "which team has the best possession", "most clean sheets", "how many goals per match in the Iranian
-    league". Without ranking you get the top 3 teams in each category (wins, shots on target, corners, possession,
-    cards, average age...). For players use v3_top_players.
+    Without ranking you get the top 3 teams in each category. For players use v3_top_players.
     """
     view = await _league_view(league_id)
     base = _season_path(view, r"/records$", season_id).removesuffix("/records")
