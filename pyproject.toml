@@ -1,9 +1,9 @@
 [project]
 name = "varzesh3-mcp"
-version = "0.2.0"
+version = "0.2.1"
 description = "Unofficial read-only MCP server for Varzesh3 (varzesh3.com), the Iranian sports site: live scores, tables, fixtures, teams, top scorers, news."
 readme = "README.md"
-license = "MIT"
+license = "PolyForm-Noncommercial-1.0.0"
 license-files = ["LICENSE"]
 authors = [{ name = "Sepehr Radmard", email = "sepehrr80@gmail.com" }]
 requires-python = ">=3.10"
