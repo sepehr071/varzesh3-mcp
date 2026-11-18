@@ -100,16 +100,6 @@ Team ids come from `v3_search` (or any table), league ids from `v3_league`, matc
 
 All 18 tools are annotated `readOnlyHint: true`.
 
-## How it works
-
-```text
-  AI agent  ──MCP over stdio──▶  varzesh3-mcp (your machine)  ──HTTPS──▶  web-api.varzesh3.com, search-api.varzesh3.com
-```
-
-The server calls the same public JSON endpoints varzesh3.com's pages use. Requests present a Chrome TLS and header profile
-(through `curl_cffi`), run at most 4 at a time and are cached for 30 seconds. System proxy settings are ignored on purpose;
-set `VARZESH3_MCP_PROXY` if your network needs one.
-
 ## FAQ
 
 **Does it need an account or key?** No.
